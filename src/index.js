@@ -1,6 +1,6 @@
-require("./database");
 const app = require("./app");
+require("./database");
+const { PORT } = require("./config");
 
-app.listen(app.get("port"));
-
-console.log("Server on port", app.get("port"));
+app.listen(PORT);
+console.log("Server listening on port", PORT);

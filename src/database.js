@@ -1,6 +1,11 @@
 const mongoose = require("mongoose");
+const { MONGODB_URI } = require("./config");
 
-mongoose
-  .connect("mongodb://localhost/employees")
-  .then((db) => console.log("Db connected"))
-  .catch((err) => console.error(err));
+(async () => {
+  try {
+    const db = await mongoose.connect(MONGODB_URI);
+    console.log("DB Connected");
+  } catch (error) {
+    console.error(error);
+  }
+})();
