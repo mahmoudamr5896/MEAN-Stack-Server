@@ -1,0 +1,28 @@
+###
+GET http://localhost:3000/api/employees
+
+###
+POST http://localhost:3000/api/employees
+Content-Type: application/json
+
+{
+    "name": "DakitoEBH",
+    "position": "Junior Developer",
+    "salar": 22000
+}
+
+###
+GET http://localhost:3000/api/employees/66005caeea8faf5fbbc529df
+
+###
+DELETE http://localhost:3000/api/employees/66005e252e4b7de881bd55a6
+
+###
+PUT http://localhost:3000/api/employees/66005caeea8faf5fbbc529df
+Content-Type: application/json
+
+{
+    "name": "DakitoEBH",
+    "position": "Senior Developer",
+    "salar": 35000
+}
