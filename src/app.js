@@ -17,7 +17,15 @@ app.use(express.urlencoded({ extended: false }));
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/test";
 const port = process.env.PORT || 3001;
 
-app.get('/',employeeCtrl.getEmployees)
+app.get('/',async (req, res) => {
+    try {
+        employeeCtrl.getEmployees
+    } catch (err) {
+      console.error('Error fetching products:', err);
+      res.status(500).json({ error: 'Failed to fetch products' });
+    }
+  }
+)
 
 app.use("/api/products", require("./routes/employees.routes"));
 
