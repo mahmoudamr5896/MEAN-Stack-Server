@@ -14,6 +14,9 @@ app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+const bodyParser = require('body-parser');
+// للتعامل مع طلبات JSON
+app.use(bodyParser.urlencoded({ extended: true }));
 
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb+srv://mahmoud:123@cluster0.0qd359r.mongodb.net/loladb";
 const port = process.env.PORT || 3001;

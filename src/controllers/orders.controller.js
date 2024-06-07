@@ -1,6 +1,5 @@
 const OrdersCtrl = {};
 const Orders = require("../models/orders");
-
 // GET
 OrdersCtrl.getOrderss = async (req, res) => {
   const Orderss = await Orders.find();
