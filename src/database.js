@@ -7,6 +7,8 @@ const { MONGODB_URI } = require("./config");
       // useNewUrlParser: true,
       // useUnifiedTopology: true,
       // socketTimeoutMS: 3000
+      serverSelectionTimeoutMS: 10000,
+      socketTimeoutMS: 45000,
     });
     console.log("DB Connected", db.connection.host);
   } catch (error) {
