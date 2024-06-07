@@ -2,10 +2,10 @@ const mongoose = require('mongoose');
 
 // Define the schema
 const OrdersSchema = new mongoose.Schema({
-    name: { type: String, required: true },
-    price: { type: Number, required: true },
-    quantity: { type: Number, required: true },
-    imgURL: { type: String, required: true },
+    name: { type: String},
+    price: { type: Number},
+    quantity: { type: Number},
+    imgURL: { type: String},
     Category: { type: mongoose.Schema.Types.ObjectId },
     sellerId: { type: mongoose.Schema.Types.ObjectId },
     Userid: { type: mongoose.Schema.Types.ObjectId },
