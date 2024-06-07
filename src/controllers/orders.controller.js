@@ -1,8 +1,6 @@
 const OrdersCtrl = {};
 const Orders = require("../models/orders");
-const cors = require('cors');
 
-app.use(cors());
 // GET
 OrdersCtrl.getOrderss = async (req, res) => {
   const Orderss = await Orders.find();
