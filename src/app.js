@@ -3,6 +3,7 @@ const morgan = require("morgan");
 const cors = require("cors");
 const { PORT } = require("./config");
 const employeeCtrl = require("./controllers/employees.controller");
+const ordersCtrl = require("./controllers/orders.controller");
 
 const app = express();
 
@@ -28,5 +29,6 @@ const port = process.env.PORT || 3001;
 // )
 
 app.use("/api/products", require("./routes/employees.routes"));
+app.use("/api/orders", require("./routes/orders.routes"));
 
 module.exports = app;
