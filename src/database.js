@@ -6,7 +6,6 @@ const { MONGODB_URI } = require("./config");
     const db = await mongoose.connect(MONGODB_URI,{
       // useNewUrlParser: true,
       // useUnifiedTopology: true,
-      // socketTimeoutMS: 3000
       serverSelectionTimeoutMS: 10000,
       socketTimeoutMS: 45000,
     });
