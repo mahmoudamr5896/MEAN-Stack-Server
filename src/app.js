@@ -17,15 +17,15 @@ app.use(express.urlencoded({ extended: false }));
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb+srv://mahmoud:123@cluster0.0qd359r.mongodb.net/loladb";
 const port = process.env.PORT || 3001;
 
-app.get('/',async (req, res) => {
-    try {
-        employeeCtrl.getEmployees
-    } catch (err) {
-      console.error('Error fetching products:', err);
-      res.status(500).json({ error: 'Failed to fetch products' });
-    }
-  }
-)
+// app.get('/',async (req, res) => {
+//     try {
+//         employeeCtrl.getEmployees
+//     } catch (err) {
+//       console.error('Error fetching products:', err);
+//       res.status(500).json({ error: 'Failed to fetch products' });
+//     }
+//   }
+// )
 
 app.use("/api/products", require("./routes/employees.routes"));
 
