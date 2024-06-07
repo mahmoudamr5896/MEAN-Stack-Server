@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/test";
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb+srv://mahmoud:123@cluster0.0qd359r.mongodb.net/loladb";
 const port = process.env.PORT || 3001;
 
 app.get('/',async (req, res) => {
