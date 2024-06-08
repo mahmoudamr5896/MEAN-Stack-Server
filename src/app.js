@@ -12,11 +12,13 @@ app.set("port", process.env.PORT || 3001);
 app.use(cors());
 app.use(morgan("dev"));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+// app.use(express.urlencoded({ extended: false }));
 
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// Middleware to parse URL-encoded bodies
+app.use(express.urlencoded({ extended: true }));
 //  
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb+srv://mahmoud:123@cluster0.0qd359r.mongodb.net/loladb";
 const port = process.env.PORT || 3001;
